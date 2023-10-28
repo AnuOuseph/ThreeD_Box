@@ -40,11 +40,13 @@ function CubeWithPictures() {
 
 function App() {
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <CubeWithPictures />
-    </Canvas>
+    <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Canvas camera={{ position: [0, 0, 10] }}>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <CubeWithPictures />
+      </Canvas>
+    </div>
   );
 }
 
